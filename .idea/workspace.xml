@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac90dde9-4593-400b-aa5d-384014687393" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MarioProjekt/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MarioProjekt/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MarioProjekt/MarioProjekt/src/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MarioProjekt/MenuCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MarioProjekt/MenuCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MarioProjekt/Pizza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MarioProjekt/Pizza.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MarioProjekt/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/MarioProjekt/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
     </list>
     <list id="c6b1c1ef-29c7-47bc-9f52-462f0597fd28" name="Changes by Jonathan" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
