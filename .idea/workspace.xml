@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac90dde9-4593-400b-aa5d-384014687393" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MarioProjekt.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MarioProjekt/src/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/MarioProjekt/MarioProjekt.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MarioProjekt/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MarioProjekt/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MarioProjekt/MarioProjekt/src/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MarioProjekt/MenuCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MarioProjekt/MenuCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MarioProjekt/Pizza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MarioProjekt/Pizza.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MarioProjekt/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/MarioProjekt/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderOverview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderOverview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Run.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu.java" afterDir="false" />
     </list>
     <list id="c6b1c1ef-29c7-47bc-9f52-462f0597fd28" name="Changes by Jonathan" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,13 +42,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,5 +88,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

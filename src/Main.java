@@ -1,5 +1,5 @@
 
-import MarioProjekt.src.Menu;
+import out.production.MarioProjekt.Menu;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,10 +8,10 @@ import java.util.Scanner;
 public class Main {
   ArrayList<Pizza> orders;
 
+
+
   public static void main(String[] args) {
     MenuCard menuCard = new MenuCard();
-    System.out.println(Arrays.toString(new MenuCard[]{menuCard}));
-
     new Main().run();
   }
 
@@ -27,10 +27,10 @@ public class Main {
     while (progess) {
       menu.printMenu();
       int menuOption = menu.readChoice();
-
+      MenuCard menuCard = new MenuCard();
       switch (menuOption) {
         case 1:
-          displayMenu();
+          menuCard.printMenu();
           break;
         case 2:
           enterOrder();

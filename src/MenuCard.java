@@ -1,13 +1,14 @@
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class MenuCard {
 
 
-  Pizza[] menuList = new Pizza[15];
+  Pizza[] menuList = new Pizza[14];
 
 
-  public void opretPizza() {
+  public Pizza[] opretPizza() {
 
     menuList[0] = new Pizza(1, "Magarita", "Tomat, ost", 60);
     menuList[1] = new Pizza(2, "Vesuvio", "Tomat, ost, skinke", 53);
@@ -24,11 +25,20 @@ public class MenuCard {
     menuList[12] = new Pizza(13, "Venezia", "Tomat, Ost, Skinke, Bacon, oregano", 61);
     menuList[13] = new Pizza(14, "Mafia", "Tomat, ost, pepperoni, bacon, løg, oregano", 61);
 
-
+    return menuList;
   }
 
-
-
+  public void printMenu(){
+    opretPizza();
+    for(int i=0; i<menuList.length; i++){
+      System.out.print(menuList[i]);
+    }
   }
+
+  @Override
+  public String toString() {
+    return "MenuList: " + Arrays.toString(menuList);
+  }
+}
 
 

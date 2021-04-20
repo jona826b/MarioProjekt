@@ -1,4 +1,4 @@
-package MarioProjekt.src;
+package out.production.MarioProjekt;
 
 import java.util.Scanner;
 
