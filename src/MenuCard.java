@@ -1,11 +1,13 @@
+
 import java.lang.reflect.Array;
 
 public class MenuCard {
 
 
-  Pizza [] menuList = new Pizza[15];
+  Pizza[] menuList = new Pizza[15];
 
-  public void opretPizza(){
+
+  public void opretPizza() {
 
     menuList[0] = new Pizza(1, "Magarita", "Tomat, ost", 60);
     menuList[1] = new Pizza(2, "Vesuvio", "Tomat, ost, skinke", 53);
@@ -19,11 +21,14 @@ public class MenuCard {
     menuList[9] = new Pizza(10, "Capricciossa", "Toamt, ost, skinke, champignon", 61);
     menuList[10] = new Pizza(11, "Hawai", "Tomat, ost, skinke, ananas", 61);
     menuList[11] = new Pizza(12, "le Blissola", "Tomat, ost, skinke, rejer", 61);
-    menuList[12] = new Pizza(13, "Venezia","Tomat, Ost, Skinke, Bacon, oregano", 61);
+    menuList[12] = new Pizza(13, "Venezia", "Tomat, Ost, Skinke, Bacon, oregano", 61);
     menuList[13] = new Pizza(14, "Mafia", "Tomat, ost, pepperoni, bacon, løg, oregano", 61);
+
+
   }
 
 
 
+  }
 
-}
+

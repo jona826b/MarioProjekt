@@ -1,3 +1,4 @@
+
 public class Pizza {
 private int num;
 private double price;
@@ -11,6 +12,15 @@ public Pizza(int num, String name, String ingredients, double price){
   this.name = name;
 
   }
+
+  public Pizza(int number) {
+  }
+
+  public Pizza() {
+
+  }
+
+
   public int getNum(){
   return num;
   }
