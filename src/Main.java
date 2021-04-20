@@ -1,15 +1,20 @@
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.time.LocalDateTime;
+import java.util.*;
 
 public class Main {
   ArrayList<Integer> orders = new ArrayList<>();
-
+  private String MARIOSORDERS = "C:/gitrepos/MarioProjekt/src/orders.txt";
+  private LocalDateTime localedatetime = LocalDateTime.now();
 
 
   public static void main(String[] args) {
+    System.out.println(new File("orders").getAbsolutePath());
     MenuCard menuCard = new MenuCard();
     new Main().run();
   }
@@ -20,7 +25,8 @@ public class Main {
         "1.Display Menu",
         "2.Start Order",
         "3.Display Orders",
-        "4.End order"});
+        "4. load order",
+        "5.End order"});
 
     progess = true;
     while (progess) {
@@ -35,6 +41,9 @@ public class Main {
           enterOrder();
           break;
         case 4:
+          loadList1();
+          break;
+        case 5:
           progess = false;
           break;
         default:
@@ -50,7 +59,15 @@ public class Main {
       }
     }
 
-    void enterOrder(){
+  public ArrayList<Integer> getOrders() {
+    return orders;
+  }
+
+  public void setOrders(ArrayList<Integer> orders) {
+    this.orders = orders;
+  }
+
+  void enterOrder(){
     Scanner scan = new Scanner(System.in);
       System.out.println("Enter the number of the pizza you wanna order TEST");
       int number = scan.nextInt();
@@ -60,7 +77,32 @@ public class Main {
         number = scan.nextInt();
       }
       System.out.println(orders);
+      try {
+        PrintStream outFile = new PrintStream(new File(MARIOSORDERS));
+        for (int i = 0; i < orders.size(); i++) {
+          outFile.println(orders.get(i));
 
+        }
+        outFile.println("\n" + localedatetime);
+      }
+      catch (InputMismatchException | FileNotFoundException e) {
+        System.out.println("IO" + e);
+      }
     }
+
+  void loadList1(){
+    ArrayList<Integer> ordersFromFile = new ArrayList<>();
+    try {
+      Scanner filereader = new Scanner(new File(MARIOSORDERS));
+      while(filereader.hasNext()){
+        String f = filereader.nextLine();
+        ordersFromFile.add(Integer.valueOf(f));
+      }
+      orders = ordersFromFile;
+      System.out.println("loaded");
+    } catch (InputMismatchException | FileNotFoundException e){
+      System.out.println("IO" + e);
+    }
+  }
   }
 
