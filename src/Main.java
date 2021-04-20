@@ -1,12 +1,11 @@
 
-import out.production.MarioProjekt.Menu;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-  ArrayList<Pizza> orders;
+  ArrayList<Integer> orders = new ArrayList<>();
 
 
 
@@ -50,16 +49,18 @@ public class Main {
         System.out.println("#" + i + ": " + orders.get(i));
       }
     }
+
     void enterOrder(){
-    int number;
-    Pizza pizza;
-      Scanner scan = new Scanner(System.in);
-      System.out.println("Enter the number of the pizza you wanna order");
-      number = scan.nextInt();
+    Scanner scan = new Scanner(System.in);
+      System.out.println("Enter the number of the pizza you wanna order TEST");
+      int number = scan.nextInt();
+      while (number != 0)
+      {
+        orders.add(number);
+        number = scan.nextInt();
+      }
+      System.out.println(orders);
 
-      pizza = new Pizza();
-
-      orders.add(pizza);
     }
   }
 

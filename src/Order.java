@@ -1,4 +1,7 @@
 public class Order {
+  String id;
+  String time;
+
   public void displayMenu(){
 
   }

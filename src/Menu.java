@@ -1,4 +1,3 @@
-package out.production.MarioProjekt;
 
 import java.util.Scanner;
 
