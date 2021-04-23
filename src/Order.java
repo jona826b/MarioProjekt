@@ -37,11 +37,6 @@ public class Order {
     return s.toString();
   }
 
-
-  public void createOrder(){
-
-  }
-
   }
 
 

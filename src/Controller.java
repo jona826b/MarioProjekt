@@ -63,19 +63,33 @@ public class Controller {
     Scanner scan = new Scanner(System.in);
     System.out.println("Enter the number of the pizza you wanna order?");
     System.out.println("End order with 0");
+
     int number = scan.nextInt();
     ArrayList<Integer> orders = new ArrayList<>();
-    while (number != 0) {
-      orders.add(number);
-      number = scan.nextInt();
-    }
-    //numberOfOrders++;
-    Order order = new Order(orders, LocalDateTime.now().toString());
-    System.out.println(order);
-    allOrders.add(order);
-    outFile.println(order);
 
+    if (number <= 14 && number >= 0) {
+
+      while (number != 0) {
+        if (number <= 14) {
+
+          orders.add(number);
+          number = scan.nextInt();
+        } else {
+          System.out.println("'" + number + "'" + " Is not a pizza please try again with a number between 1-14");
+          number = scan.nextInt();
+        }
+      }
+      //numberOfOrders++;
+      Order order = new Order(orders, LocalDateTime.now().toString());
+      System.out.println(order);
+      allOrders.add(order);
+      outFile.println(order);
+
+    }
   }
+
+
+
 
   void loadList() {
 
@@ -133,4 +147,5 @@ public class Controller {
 
     }
   }
+
 }
