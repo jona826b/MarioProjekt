@@ -2,13 +2,13 @@
 public class Pizza {
 private int num;
 private double price;
-private String ingredients;
+private String toppings;
 private String name;
 
-public Pizza(int num, String name, String ingredients, double price){
+public Pizza(int num, String name, String toppings, double price){
   this.num = num;
   this.price = price;
-  this.ingredients = ingredients;
+  this.toppings = toppings;
   this.name = name;
 
   }
@@ -28,7 +28,7 @@ public Pizza(int num, String name, String ingredients, double price){
   return price;
   }
   public String getIngredients(){
-  return ingredients;
+  return toppings;
   }
   public String getName(){
   return name;
@@ -37,7 +37,7 @@ public Pizza(int num, String name, String ingredients, double price){
   @Override
   public String toString() {
     return "Pizza:" +
-        "num: " + num + ", name: " + name + ", ingredients: " + ingredients + ", price: " + price + "\n";
+        "num: " + num + ", name: " + name + ", toppings: " + toppings + ", price: " + price + "\n";
 
   }
 
