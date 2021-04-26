@@ -28,9 +28,9 @@ public class MenuCard {
     return menuList;
   }
 
-  public void printMenu(){
+  public void printMenu() {
     opretPizza();
-    for(int i=0; i<menuList.length; i++){
+    for (int i = 0; i < menuList.length; i++) {
       System.out.print(menuList[i]);
     }
   }

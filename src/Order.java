@@ -20,24 +20,23 @@ public class Order {
     this.localdatetime = now;
   }
 
-  public static void x(int n){
+  public static void orderNumGenerator(int n) {
     orderNrGenerator = n;
   }
 
-  public String toString(){
+  public String toString() {
     StringBuilder s = new StringBuilder();
     s.append(orderNr);
     s.append(",");
     s.append(localdatetime);
-    for (int i = 0; i < pizzas.size(); i++){
+    for (int i = 0; i < pizzas.size(); i++) {
       s.append(",");
       s.append(pizzas.get(i));
     }
-    // 1, 1 jan, 2, 3
     return s.toString();
   }
 
-  }
+}
 
 
 

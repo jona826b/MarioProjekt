@@ -1,15 +1,14 @@
 import java.io.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Controller {
   ArrayList<Order> allOrders = new ArrayList<>();
-  //private int numberOfOrders = 0;
   private String MARIOSORDERS = "orders.txt";
   private FileOutputStream outPutFile;
-  private LocalDateTime localedatetime = LocalDateTime.now();
   PrintStream outFile;
 
   void run() {
@@ -66,29 +65,22 @@ public class Controller {
 
     int number = scan.nextInt();
     ArrayList<Integer> orders = new ArrayList<>();
+    while (number != 0) {
+      if (number <= 14 && number > 0) {
 
-    if (number <= 14 && number >= 0) {
-
-      while (number != 0) {
-        if (number <= 14) {
-
-          orders.add(number);
-          number = scan.nextInt();
-        } else {
-          System.out.println("'" + number + "'" + " Is not a pizza please try again with a number between 1-14");
-          number = scan.nextInt();
-        }
+        orders.add(number);
+        number = scan.nextInt();
+      } else {
+        System.out.println("'" + number + "'" + " Is not a pizza please try again with a number between 1-14");
+        number = scan.nextInt();
       }
-      //numberOfOrders++;
-      Order order = new Order(orders, LocalDateTime.now().toString());
-      System.out.println(order);
-      allOrders.add(order);
-      outFile.println(order);
-
     }
+    Order order = new Order(orders, dateTime());
+    System.out.println(order);
+    allOrders.add(order);
+    outFile.println(order);
+
   }
-
-
 
 
   void loadList() {
@@ -102,31 +94,33 @@ public class Controller {
         numberOfOrders = Integer.parseInt(split[0]);
         String time = split[1];
         ArrayList<Integer> pizza = new ArrayList<>();
-        for (int i = 2; i < split.length; i++){
+        for (int i = 2; i < split.length; i++) {
           pizza.add(Integer.parseInt(split[i]));
         }
-        Order order = new Order(numberOfOrders, pizza ,time );
+        Order order = new Order(numberOfOrders, pizza, time);
 
         allOrders.add(order);
-        Order.x(numberOfOrders);
+        Order.orderNumGenerator(numberOfOrders);
       }
       System.out.println("loaded");
     } catch (InputMismatchException | FileNotFoundException e) {
       System.out.println("IO" + e);
     }
   }
-  void displayOrder () {
-    for (int i = 0; i < allOrders.size(); i++){
+
+  void displayOrder() {
+    for (int i = 0; i < allOrders.size(); i++) {
       System.out.println(allOrders.get(i));
 
     }
   }
-  void deleteOrder (){
+
+  void deleteOrder() {
     Scanner scan = new Scanner(System.in);
     System.out.println("Enter order number you want to delete");
     int orderNr = scan.nextInt();
-    for (int i = 0; i < allOrders.size(); i++){
-      if (orderNr == allOrders.get(i).orderNr){
+    for (int i = 0; i < allOrders.size(); i++) {
+      if (orderNr == allOrders.get(i).orderNr) {
         allOrders.remove(allOrders.get(i));
         resetLogFile();
         break;
@@ -134,7 +128,8 @@ public class Controller {
     }
 
   }
-  void resetLogFile(){
+
+  void resetLogFile() {
     try {
       outPutFile = new FileOutputStream(MARIOSORDERS, false);
       outFile = new PrintStream(outPutFile);
@@ -142,10 +137,17 @@ public class Controller {
     } catch (IOException | InputMismatchException e) {
       System.out.println("IO" + e);
     }
-    for (int i = 0; i < allOrders.size(); i++){
+    for (int i = 0; i < allOrders.size(); i++) {
       outFile.println(allOrders.get(i));
 
     }
+  }
+
+  public String dateTime() {
+    LocalDateTime time = LocalDateTime.now();
+    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+    String dateTime = time.format(fmt);
+    return dateTime;
   }
 
 }
